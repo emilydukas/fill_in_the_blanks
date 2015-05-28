@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/posts', to: 'posts#index', as: 'posts'
 
   # This root route is pointing to the wrong controller, fix it
-  root 'welcome#index'
+  root 'posts#index'
+
+  resources :posts
 
 end
